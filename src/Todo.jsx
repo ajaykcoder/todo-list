@@ -43,7 +43,7 @@ const Todo = () => {
     };
 
     return (
-        <div style={{ padding: "30px" }}>
+        <div>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="">Title</label><br/>
