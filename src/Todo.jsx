@@ -5,7 +5,6 @@ const Todo = () => {
     const [todoList, setTodoList] = useState([]);
     const [errors, setErrors] = useState({title: "", description: ""});
     const [isSubmitting, setIsSubmitting] = useState(false);
-
     const handleSubmit = (e) => {
         e.preventDefault();
         if(isSubmitting){
@@ -19,12 +18,10 @@ const Todo = () => {
         setForm({title: "", description: "" });
         setIsSubmitting(false);
     };
-
     const onChange = (e) => {
         const {name, value} = e.target;
         handleCustom(name, value);
     };
-
     const handleCustom = (name, value) => {
         setForm((prevState) => ({ ...prevState, [name]: value }));
     };
@@ -47,7 +44,7 @@ const Todo = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="">Title</label><br/>
-                    <input type="text" name="title" value={form.title} onChange={onChange} />
+                    <input type="text" name="title" value={form.title} onChange={onChange}/>
                     {errors.title && (
                         <div style={{ color: "red", fontSize: "14px" }}>{errors.title}</div>
                     )}
@@ -55,7 +52,7 @@ const Todo = () => {
                 <br/>
                 <div>
                     <label htmlFor="">Description</label><br/>
-                    <input type="text" name="description" value={form.description} onChange={onChange} />
+                    <input type="text" name="description" value={form.description} onChange={onChange}/>
                     {errors.description && (
                         <div style={{ color: "red", fontSize: "14px" }}>{errors.description}</div>
                     )}
@@ -63,7 +60,6 @@ const Todo = () => {
                 </div>
                 <button type="submit">Submit</button>
             </form>
-
             <br/><br/><br/>
             <table>
                 <thead>
