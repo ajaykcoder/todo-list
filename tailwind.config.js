@@ -12,7 +12,8 @@ module.exports = {
             "black" : "#212529",
             "darkBlack" : "#000000",
             "red" : "#B00020",
-            "transparent" : "#FFFFFF00"
+            "transparent" : "#FFFFFF00",
+            "blur" : "#FFF3"
         },
         screens: {
             "full": {"max": "1580px"},
