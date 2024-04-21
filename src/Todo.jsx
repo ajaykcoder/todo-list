@@ -56,12 +56,11 @@ const Todo = () => {
         setTodoList(updatedTodoList);
         setForm({title: "", description: ""});
     };
-
     return (
-        <div className="flex items-center justify-center h-lvh p-10 bg-[url('https://www.icloud.com/system/icloud.com/current/wallpaper.webp')] bg-no-repeat bg-cover">
-            <div className="bg-teal-300 p-16 rounded-3xl size-full bg-blur backdrop-blur-lg flex gap-x-8">
-                <form onSubmit={handleSubmit} className="w-[40%] flex flex-col justify-center">
-                    <h1 className="text-black font-bold text-4xl text-center">Todo List</h1>
+        <div className="flex items-center h-lvh p-10 bg-[url('https://www.icloud.com/system/icloud.com/current/wallpaper.webp')] bg-no-repeat bg-cover tablet:h-[1000px] tablet:p-5">
+            <div className="p-8 rounded-3xl size-full bg-blur backdrop-blur-lg flex items-center gap-x-8 max-w-[1440px] h-[600px] mx-auto tablet:flex-col tablet:gap-y-6 tablet:p-5 tablet:h-full">
+                <form onSubmit={handleSubmit} className="w-[40%] flex flex-col justify-center tablet:w-full">
+                    <h1 className="text-black font-bold text-4xl text-center tablet:text-2xl tablet:mb-2">Todo List</h1>
                     <div className="mb-4">
                         <label className="text-base mb-1 flex">Title</label>
                         <input className="border border-white bg-transparent h-10 w-full focus:outline-none px-4 backdrop-blur-lg text-white rounded-md" type="text" name="title" value={form.title} onChange={onChange}/>
@@ -80,8 +79,8 @@ const Todo = () => {
                         <button className="bg-darkBlack hover:bg-black text-base h-10 px-4 rounded-md text-white" type="submit">Submit</button>
                     </div>
                 </form>
-                <div className="w-[60%] mt-[18%]">
-                    <div class="relative overflow-x-auto shadow-md rounded-lg">
+                <div className="w-[60%] tablet:w-full">
+                    <div class="relative overflow-x-auto shadow-md rounded-lg max-h-[347px] tablet:max-h-[560px]">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 rounded-lg overflow-hidden">
                             <thead class="text-xs text-[#9CA3AF] uppercase bg-[#374151]">
                                 <tr>
@@ -108,7 +107,7 @@ const Todo = () => {
                                     ))
                                 ) : (
                                     <tr class="bg-[#1F2937] border-b">
-                                        <td colSpan={4} class="px-6 py-4 font-medium text-white whitespace-nowrap">No Data Found</td>
+                                        <td colSpan={4} class="px-4 py-[70px] font-medium text-white whitespace-nowrap text-center">No Data Found</td>
                                     </tr>
                                 )}
                             </tbody>
