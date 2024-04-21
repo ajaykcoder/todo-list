@@ -40,7 +40,7 @@ const Todo = () => {
     };
 
     return (
-        <div className="flex items-center justify-center h-lvh p-10 bg-[url('https://www.icloud.com/system/icloud.com/current/wallpaper.webp')]">
+        <div className="flex items-center justify-center h-lvh p-10 bg-[url('https://www.icloud.com/system/icloud.com/current/wallpaper.webp')] bg-no-repeat bg-cover">
             <div className="bg-teal-300 p-16 rounded-3xl size-full flex bg-blur backdrop-blur-lg">
                 <form onSubmit={handleSubmit} className="w-[40%] flex flex-col justify-center">
                     <h1 className="text-darkBlack font-bold text-4xl text-center">Todo List</h1>
