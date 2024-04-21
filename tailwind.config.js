@@ -11,7 +11,7 @@ module.exports = {
             "text" : "#475056",
             "black" : "#212529",
             "darkBlack" : "#000000",
-            "red" : "#B00020",
+            "red" : "#FF0000",
             "transparent" : "#FFFFFF00",
             "blur" : "#FFF3"
         },
