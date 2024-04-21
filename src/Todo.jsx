@@ -42,8 +42,8 @@ const Todo = () => {
     return (
         <div className="flex items-center justify-center h-lvh p-10 bg-[url('https://www.icloud.com/system/icloud.com/current/wallpaper.webp')]">
             <div className="bg-teal-300 p-16 rounded-3xl size-full flex bg-blur backdrop-blur-lg">
-                <form onSubmit={handleSubmit} className="flex-1 flex flex-col justify-center">
-                    <h1 className="text-darkBlack font-bold">Todo List</h1>
+                <form onSubmit={handleSubmit} className="w-[40%] flex flex-col justify-center">
+                    <h1 className="text-darkBlack font-bold text-4xl text-center">Todo List</h1>
                     <div className="mb-4">
                         <label className="text-base mb-1 flex">Title</label>
                         <input className="border border-white bg-transparent h-10 w-full focus:outline-none px-4 backdrop-blur-lg text-white rounded-md" type="text" name="title" value={form.title} onChange={onChange}/>
@@ -53,7 +53,7 @@ const Todo = () => {
                     </div>
                     <div className="mb-4">
                         <label className="text-base mb-1 flex">Description</label>
-                        <input className="border border-white bg-transparent h-10 w-full focus:outline-none px-4 backdrop-blur-lg text-white rounded-md" type="text" name="description" value={form.description} onChange={onChange}/>
+                        <textarea className="border border-white bg-transparent h-28 w-full focus:outline-none p-4 backdrop-blur-lg text-white rounded-md resize-none" name="description" value={form.description} onChange={onChange}/>
                         {errors.description && (
                             <div className="text-red text-sm mt-1">{errors.description}</div>
                         )}
@@ -62,13 +62,13 @@ const Todo = () => {
                         <button className="bg-darkBlack hover:bg-black text-base h-10 px-4 rounded-md text-white" type="submit">Submit</button>
                     </div>
                 </form>
-                <div className="w-3/5">
+                <div className="w-[60%]">
                     <table className="w-full">
                         <thead>
                             <tr>
-                                <td>Title</td>
-                                <td>Description</td>
-                                <td>Action</td>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
